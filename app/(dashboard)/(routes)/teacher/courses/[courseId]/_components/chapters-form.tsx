@@ -64,7 +64,7 @@ export const ChaptersForm = ({
         }
     };
 
-    const onReorder = async (updateData: { id: string; postion: number }
+    const onReorder = async (updateData: { id: string; position: number }[]
         ) => {
             try {
                 setIsUpdating(true);

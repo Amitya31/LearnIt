@@ -44,7 +44,9 @@ export const DescriptionForm = ({
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
-        description: initialData || { description: "" }, // Providing default value if initialData is undefined
+        defaultValues: {
+            description: initialData?.description || "",
+        },
     });
 
     const { isSubmitting, isValid } = form.formState;
